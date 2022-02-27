@@ -1,0 +1,131 @@
+.select {
+    position: relative;
+    width: 100%;
+}
+
+.select__toggle {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    margin-right: 2px;
+    width: 100%;
+    font-size: 1rem;
+    user-select: none;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.select__toggle:focus {
+    outline: none;
+    background: #7943A4;
+    transition: all 0.3s ease-in-out;
+}
+
+.select__toggle:hover {
+    color: #C283F3;
+    background: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.select__toggle:active {
+    color: #7943A4;
+    background: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.select__toggle::after {
+    content: '';
+    width: 12px;
+    height: 7px;
+    flex-shrink: 0;
+    margin-left: 3px;
+    margin-top: 3px;
+    background-size: cover;
+    background-image: url("../img/header/arrow-down.svg");
+    transition: all 0.3s ease-in-out;
+}
+
+.select__toggle:hover::after {
+    background-image: url("../img/header/arrow-down-hover.svg");
+    transition: all 0.3s ease-in-out;
+}
+
+.select__toggle:active::after {
+    background-image: url("../img/header/arrow-down-activ.svg");
+    transition: all 0.3s ease-in-out;
+}
+
+.select_show .select__toggle::after {
+    transform: rotate(180deg);
+    transition: all 0.3s ease-in-out;
+}
+
+.select__dropdown {
+    display: none;
+    position: absolute;
+    top: 47px;
+    left: 0;
+    right: 0;
+    width: 300px;
+    max-height: 280px;
+    overflow-y: auto;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.select_show .select__dropdown {
+    display: block;
+}
+
+.select_show .select__backdrop {
+    display: block;
+}
+
+.select__options {
+    margin: 0;
+    padding: 40px;
+    list-style: none;
+}
+
+.select__option {
+    position: relative;
+    padding: 10px 0 11px 14px;
+    width: 220px;
+    height: 40px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    color: #FFFFFF;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.select__option:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.select__option:focus {
+    outline: 2px solid #9D5CD0;
+    transition: all 0.3s ease-in-out;
+}
+
+.select__option:hover {
+    outline: 2px solid #9D5CD0;
+    transition: all 0.3s ease-in-out;
+}
+
+.select__option:active::before {
+    content: '';
+    z-index: 20;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url(.jpg);
+    outline: 2px solid #D1A9F0;
+    transition: all 0.3s ease-in-out;
+}
