@@ -41,7 +41,7 @@ body {
 .container {
     margin: 0 auto;
     padding: 0 15px;
-    width: 1630px;
+    max-width: 1630px;
 }
 
 .visually-hidden {
@@ -97,10 +97,13 @@ body {
     margin-right: 179px;
 }
 
+.nav {
+    margin-right: auto;
+}
+
 .header-top__list {
     display: flex;
     align-items: center;
-    margin-right: auto;
 }
 
 .header-top__item:not(:last-child) {
@@ -374,13 +377,13 @@ body {
 /* ---------------------------hero----------------- */
 
 .hero {
-    margin-bottom: 86px;
+    margin-bottom: 80px;
 }
 
 .hero-info {
     position: relative;
     z-index: 100;
-    padding: 239px 0 139px 152px;
+    padding: 239px 0 145px 0;
     max-width: 597px;
 }
 
@@ -394,7 +397,7 @@ body {
 }
 
 .hero-info__descr {
-    margin-bottom: 84px;
+    margin-bottom: 114px;
     max-width: 579px;
     font-weight: bold;
     font-size: 18px;
@@ -438,10 +441,12 @@ body {
 
 .swiper {
     position: relative;
+    background-color: #666666;
 }
 
 .swiper-wrapper {
     position: absolute;
+    height: 100%;
     z-index: 50;
     top: 0;
     left: 0;
@@ -452,19 +457,19 @@ body {
 .slide-1 {
     background-image: url("../img/hero/slider-1.jpg");
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 100% 100%;
 }
 
 .slide-2 {
     background-image: url("../img/hero/slider-2.jpg");
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 100% 100%;
 }
 
 .slide-3 {
     background-image: url("../img/hero/slider-3.jpg");
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 100% 100%;
 }
 
 
@@ -910,7 +915,7 @@ label:hover {
 
 .catalog-descr {
     margin-bottom: 39px;
-    width: 1080px;
+    max-width: 1080px;
     font-weight: normal;
     font-size: 16px;
     line-height: 32px;
@@ -925,7 +930,7 @@ label:hover {
 .catalog-tabs {
     display: none;
     margin-right: 50px;
-    width: 750px;
+    max-width: 750px;
 }
 
 .catalog-tabs--activ {
@@ -977,36 +982,40 @@ label:hover {
     border-bottom: 1px solid transparent;
 }
 
-.catalog__items-info--link:focus {
+.ui-widget-content a {
+    color: var(--border-color);
+}
+
+.ui-widget-content .catalog__items-info--link {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 32px;
+    color: var(--descr-color);
+}
+
+.ui-widget-content .catalog__items-info--link:focus {
     color: var(--link-color);
     outline: none;
     background-color: var(--border-color);
     transition: all 0.3s ease-in-out;
 }
 
-.catalog__items-info--link:hover {
+.ui-widget-content .catalog__items-info--link:hover {
     color: var(--border-color);
     border-bottom: 1px solid currentColor;
     background-color: transparent;
     transition: all 0.3s ease-in-out;
 }
 
-.catalog__items-info--link:active {
+.ui-widget-content .catalog__items-info--link:active {
     color: var(--status-color-dark);
     border-bottom: 1px solid transparent;
     background-color: transparent;
     transition: all 0.3s ease-in-out;
 }
 
-.ui-widget-content a {
-    color: var(--border-color);
-}
-
+.ui-icon-triangle-1-s,
 .ui-icon-triangle-1-e {
-    display: none;
-}
-
-.ui-icon-triangle-1-s {
     display: none;
 }
 
@@ -1242,8 +1251,8 @@ label:hover {
 }
 
 .swiper-slide__info {
-    padding: 13px 50px 48px 50px;
-    min-height: 335px;
+    padding: 13px 50px 75px 50px;
+    min-height: 308px;
     background: var(--link-color);
     border: 1px solid #CACACA;
     border-top: none;
@@ -1315,7 +1324,7 @@ label:hover {
 
 .projects-descr {
     margin-bottom: 20px;
-    width: 1080px;
+    max-width: 1080px;
     font-weight: normal;
     font-size: 16px;
     line-height: 32px;
@@ -1694,7 +1703,11 @@ label:hover {
     margin-right: 20px;
 }
 
-.footer__item-link svg path:focus {
+.footer__item-link:focus {
+    outline: none;
+}
+
+.footer__item-link:focus svg path {
     fill: var(--link-color);
     transition: all 0.3s ease-in-out;
 }
