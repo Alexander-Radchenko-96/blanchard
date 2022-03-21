@@ -100,24 +100,6 @@ let mySwiper1 = new Swiper(slider1, {
     },
 });
 
-// настраиваем высоту карточек в Событиях
-
-// function setEqualHeight(columns) {
-//     var tallestcolumn = 0;
-//     columns.each(
-//         function() {
-//             currentHeight = $(this).height();
-//             if (currentHeight > tallestcolumn) {
-//                 tallestcolumn = currentHeight;
-//             }
-//         }
-//     );
-//     columns.height(tallestcolumn);
-// };
-// $(document).ready(function() {
-//     setEqualHeight($(".events-slide > .swiper-slide__info"));
-// });
-
 // Настраиваем слайдер секции events
 
 let mySwiper2 = new Swiper(slider2, {
@@ -135,16 +117,17 @@ let mySwiper2 = new Swiper(slider2, {
     },
 
     breakpoints: {
-        666: {
-            slidesPerView: 1,
-            spaceBetween: 5,
-            slidesPerGroup: 1
+
+        650: {
+            slidesPerView: 2,
+            spaceBetween: 34,
+            slidesPerGroup: 2
         },
 
-        768: {
-            slidesPerView: 2,
+        1024: {
+            slidesPerView: 3,
             spaceBetween: 27,
-            slidesPerGroup: 2
+            slidesPerGroup: 3
         },
 
         1325: {
@@ -178,6 +161,12 @@ let mySwiper3 = new Swiper(slider3, {
         768: {
             slidesPerView: 2,
             spaceBetween: 30,
+            slidesPerGroup: 2,
+        },
+
+        1024: {
+            slidesPerView: 2,
+            spaceBetween: 50,
             slidesPerGroup: 2,
         },
 

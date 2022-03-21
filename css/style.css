@@ -624,6 +624,10 @@ body {
     border-bottom: 1px solid var(--small-text-color);
 }
 
+.select__option_selected {
+    display: none;
+}
+
 .gallary-left__item-label {
     font-weight: normal;
     font-size: 16px;
@@ -811,7 +815,7 @@ label:hover {
     transition: all 0.3s ease-in-out;
 }
 
-.gallary-slide:hover::before {
+.gallary-slide::before {
     content: '';
     position: absolute;
     z-index: 50;
@@ -822,10 +826,16 @@ label:hover {
     width: 85.8%;
     height: 85.8%;
     flex-shrink: 0;
+    opacity: 0;
     background-color: rgba(0, 0, 0, 0.5);
     background-image: url("../img/gallary/lupe.svg");
     background-position: center 45.5%;
     background-repeat: no-repeat;
+    transition: all 0.3s ease-in-out;
+}
+
+.gallary-slide:hover::before {
+    opacity: 1;
     transition: all 0.3s ease-in-out;
 }
 
@@ -835,7 +845,7 @@ label:hover {
     transition: all 0.3s ease-in-out;
 }
 
-.gallary-slide:active:after {
+.gallary-slide::after {
     content: '';
     position: absolute;
     top: 0;
@@ -844,6 +854,12 @@ label:hover {
     left: 0;
     z-index: 5;
     background-image: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url(A5A9A825-44DE-45C8-8EBD-70ED43DAA3B7.jpg);
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.gallary-slide:active::after {
+    opacity: 1;
     transition: all 0.3s ease-in-out;
 }
 
@@ -1260,6 +1276,12 @@ label:hover {
     z-index: 1;
 }
 
+.events-slide {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+
 .swiper-slide__picture img {
     width: 100%;
     object-fit: cover;
@@ -1324,6 +1346,7 @@ label:hover {
     margin-top: -3px;
     display: flex;
     flex-direction: column;
+    flex: 1;
     padding: 13px 50px 37px 50px;
     min-height: 345px;
     background: var(--link-color);
@@ -1354,7 +1377,7 @@ label:hover {
 
 .swiper-slide__info-descr {
     margin-bottom: auto;
-    font-weight: normal;
+    font-weight: 400;
     font-size: 16px;
     line-height: 32px;
     color: var(--descr-color);
@@ -1442,6 +1465,7 @@ label:hover {
 .tippy-box {
     padding: 6px 11px;
     text-align: center;
+    border-radius: 0;
     background-color: var(--border-color);
 }
 
@@ -1693,7 +1717,7 @@ label:hover {
 }
 
 .feedback-form-order {
-    padding: 10px 33px;
+    padding: 10.5px 33px;
     border: 2px solid var(--border-color);
     border-radius: 100px;
     font-weight: bold;
