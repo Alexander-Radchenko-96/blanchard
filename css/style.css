@@ -40,8 +40,8 @@ body {
 
 .container {
     margin: 0 auto;
-    padding: 0 15px;
-    max-width: 1630px;
+    padding: 0 30px;
+    max-width: 1660px;
 }
 
 .visually-hidden {
@@ -135,7 +135,7 @@ body {
     color: var(--link-color);
 }
 
-.header-top__item-link:focus {
+.header-top__item-link:focus-visible {
     outline: none;
     background: var(--status-color-dark);
     transition: all 0.3s ease-in-out;
@@ -163,7 +163,7 @@ body {
     color: var(--link-color);
 }
 
-.header-link:focus {
+.header-link:focus-visible {
     outline: none;
     background-color: var(--status-color-dark);
     transition: all 0.3s ease-in-out;
@@ -344,7 +344,7 @@ body {
     background-color: transparent;
 }
 
-.header-bottom__search-input:focus {
+.header-bottom__search-input:focus-visible {
     outline: none;
     border-bottom: 1px solid var(--status-color-light);
     transition: all 0.3s ease-in-out;
@@ -442,7 +442,7 @@ body {
     color: var(--link-color);
 }
 
-.hero-info__link:focus {
+.hero-info__link:focus-visible {
     outline: 2px solid var(--status-color-light);
     outline-offset: 2px;
     transition: all 0.3s ease-in-out;
@@ -569,7 +569,7 @@ body {
     color: var(--link-color);
 }
 
-.gallary-left__list-btn:focus {
+.gallary-left__list-btn:focus-visible {
     background: rgba(255, 255, 255, 0.2);
     color: var(--link-color);
     transition: all 0.3s ease-in-out;
@@ -604,7 +604,7 @@ body {
     color: var(--small-text-color);
 }
 
-.gallary-left__list-item:focus {
+.gallary-left__list-item:focus-visible {
     background: rgba(255, 255, 255, 0.2);
     color: var(--link-color);
     outline: none;
@@ -771,8 +771,8 @@ label:hover {
     transition: all 0.3s ease-in-out;
 }
 
-.gallary__swiper-button-prev:focus,
-.gallary__swiper-button-next:focus {
+.gallary__swiper-button-prev:focus-visible,
+.gallary__swiper-button-next:focus-visible {
     outline: 2px solid var(--background-color);
     transition: all 0.3s ease-in-out;
 }
@@ -809,7 +809,7 @@ label:hover {
     cursor: pointer;
 }
 
-.gallary-slide:focus {
+.gallary-slide:focus-visible {
     outline: 3px solid var(--status-color-dark);
     outline-offset: -3px;
     transition: all 0.3s ease-in-out;
@@ -908,9 +908,16 @@ label:hover {
     display: none;
     position: fixed;
     align-items: center;
-    width: 46.9%;
-    height: 60.7%;
+    width: 900px;
+    height: 480px;
+    max-height: 90vh;
     transition: all .3s ease-in-out;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.modal::-webkit-scrollbar {
+    display: none;
 }
 
 .modal--visible {
@@ -935,7 +942,7 @@ label:hover {
 }
 
 .modal-img {
-    width: 44.5%;
+    width: 400px;
     height: 100%;
 }
 
@@ -945,13 +952,17 @@ label:hover {
 }
 
 .modal-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0 50px;
+    padding: 20px 40px;
     width: 500px;
     height: 100%;
     background-color: var(--link-color);
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.modal-info::-webkit-scrollbar {
+    display: none;
 }
 
 .modal-info__title {
@@ -978,7 +989,7 @@ label:hover {
 }
 
 .modal-info__descr {
-    font-weight: normal;
+    font-weight: 400;
     font-size: 16px;
     line-height: 22px;
     color: var(--descr-color);
@@ -1017,7 +1028,7 @@ label:hover {
 }
 
 .tabs__img {
-    margin-bottom: 28px;
+    margin-bottom: 25px;
     width: 100%;
 }
 
@@ -1045,6 +1056,29 @@ label:hover {
     color: var(--descr-color);
 }
 
+.tabs-link {
+    color: var(--border-color);
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.tabs-link:focus-visible {
+    outline: none;
+    background-color: var(--border-color);
+    color: var(--link-color);
+}
+
+.tabs-link:hover {
+    color: var(--status-color-dark);
+    background-color: transparent;
+}
+
+.tabs-link:active {
+    color: var(--descr-color);
+    background-color: transparent;
+}
+
 
 /* --------------------accordion-catalog */
 
@@ -1061,7 +1095,26 @@ label:hover {
 }
 
 .ui-widget-content a {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
     color: var(--border-color);
+}
+
+.ui-widget-content a:focus-visible {
+    outline: none;
+    background-color: var(--border-color);
+    color: var(--link-color);
+}
+
+.ui-widget-content a:hover {
+    color: var(--status-color-dark);
+    background-color: transparent;
+}
+
+.ui-widget-content a:active {
+    color: var(--descr-color);
+    background-color: transparent;
 }
 
 .ui-widget-content .catalog__items-info--link {
@@ -1071,7 +1124,7 @@ label:hover {
     color: var(--descr-color);
 }
 
-.ui-widget-content .catalog__items-info--link:focus {
+.ui-widget-content .catalog__items-info--link:focus-visible {
     color: var(--link-color);
     outline: none;
     background-color: var(--border-color);
@@ -1110,7 +1163,7 @@ label:hover {
     border-bottom: 1px solid var(--border-color-dafault);
 }
 
-.ui-accordion .ui-accordion-header:focus {
+.ui-accordion .ui-accordion-header:focus-visible {
     outline: none;
 }
 
@@ -1293,10 +1346,10 @@ label:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    top: 51.9%;
+    top: 52.1%;
     z-index: 50;
     width: 52px;
-    height: 51px;
+    height: 52px;
     border-radius: 50%;
     background: #ECECEC;
     background-repeat: no-repeat;
@@ -1306,11 +1359,11 @@ label:hover {
 }
 
 .events__swiper-button-next {
-    right: -13px;
+    right: 2px;
 }
 
-.events__swiper-button-next:focus,
-.events__swiper-button-prev:focus {
+.events__swiper-button-next:focus-visible,
+.events__swiper-button-prev:focus-visible {
     outline: 2px solid var(--border-color);
     transition: all 0.3s ease-in-out;
 }
@@ -1329,7 +1382,7 @@ label:hover {
 }
 
 .events__swiper-button-prev {
-    left: -13px;
+    left: 2px;
     transform: rotate(180deg);
     transition: all 0.3s ease-in-out;
 }
@@ -1392,7 +1445,7 @@ label:hover {
     border-bottom: 1px solid currentColor;
 }
 
-.swiper-slide__info-link:focus {
+.swiper-slide__info-link:focus-visible {
     outline: none;
     color: var(--link-color);
     border-bottom: 1px solid currentColor;
@@ -1436,7 +1489,7 @@ label:hover {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    margin-left: 2px;
+    margin-left: 6px;
     width: 16px;
     height: 16px;
     border-radius: 50%;
@@ -1445,7 +1498,7 @@ label:hover {
     color: var(--background-color);
 }
 
-.projects-button:focus {
+.projects-button:focus-visible {
     color: var(--background-color);
     outline: none;
     background: #D1A9F0;
@@ -1497,7 +1550,7 @@ label:hover {
     border-bottom: 1px solid transparent;
 }
 
-.projects-descr__link:focus {
+.projects-descr__link:focus-visible {
     color: var(--link-color);
     outline: none;
     background-color: var(--border-color);
@@ -1550,15 +1603,15 @@ label:hover {
     align-items: center;
     justify-content: center;
     width: 32px;
-    height: 30px;
+    height: 32px;
     background: #ECECEC;
     border-radius: 50%;
     background-repeat: no-repeat;
     background-position: center center;
 }
 
-.projects__swiper-button-next:focus,
-.projects__swiper-button-prev:focus {
+.projects__swiper-button-next:focus-visible,
+.projects__swiper-button-prev:focus-visible {
     outline: 2px solid var(--border-color);
     transition: all 0.3s ease-in-out;
 }
@@ -1586,7 +1639,7 @@ label:hover {
     border: 1px solid var(--border-color-dafault);
 }
 
-.projects__swipper-link:focus {
+.projects__swipper-link:focus-visible {
     outline: none;
     border: 1px solid var(--border-color);
     transition: all 0.3s ease-in-out;
@@ -1676,7 +1729,6 @@ label:hover {
 .feedback-form-label {
     position: relative;
     margin-right: 4px;
-    margin-bottom: 5px;
 }
 
 .js-validate-error-label {
@@ -1700,7 +1752,7 @@ label:hover {
     border-radius: 100px;
 }
 
-.feedback-form-input:focus {
+.feedback-form-input:focus-visible {
     outline: none;
     background: #EAEAEA;
     transition: all 0.3s ease-in-out;
@@ -1727,7 +1779,7 @@ label:hover {
     color: var(--border-color);
 }
 
-.feedback-form-order:focus {
+.feedback-form-order:focus-visible {
     border: 2px solid var(--status-color-dark);
     outline: 2px solid var(--status-color-light);
     outline-offset: 2px;
@@ -1775,7 +1827,7 @@ label:hover {
     margin-right: 20px;
 }
 
-.feedback__social-item-link:focus {
+.feedback__social-item-link:focus-visible {
     outline: none;
     opacity: .5;
     transition: all 0.3s ease-in-out;
@@ -1830,11 +1882,11 @@ label:hover {
     margin-right: 20px;
 }
 
-.footer__item-link:focus {
+.footer__item-link:focus-visible {
     outline: none;
 }
 
-.footer__item-link:focus svg path {
+.footer__item-link:focus-visible svg path {
     fill: var(--link-color);
     transition: all 0.3s ease-in-out;
 }

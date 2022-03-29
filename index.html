@@ -4,14 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <link rel="shortcut icon" href="./img/favicon.svg">
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./libs/simplebar.css">
     <link rel="stylesheet" href="./libs/custom-select.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/media.css">
     <title>Blanchard</title>
@@ -72,19 +71,23 @@
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M16.1246 24.174C10.0376 24.174 5.32763 19.2726 5.32763 13.5104C5.32763 7.74823 10.0376 2.84676 16.1246 2.84676C22.2115 2.84676 26.9215 7.74823 26.9215 13.5104C26.9215 19.2726 22.2115 24.174 16.1246 24.174ZM16.1246 26.8399C8.76285 26.8399 2.79502 20.8721 2.79502 13.5104C2.79502 6.14869 8.76285 0.180847 16.1246 0.180847C23.4863 0.180847 29.4541 6.14869 29.4541 13.5104C29.4541 20.8721 23.4863 26.8399 16.1246 26.8399Z" fill="white"/>
                         </svg>                    
                 </button>
-                <div class="header-search-window">
-                    <svg class="header-search-top" width="30" height="29" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="9.15446" height="2.28862" transform="matrix(-0.718931 0.695081 0.718931 0.695081 6.58154 21.0461)" fill="white"/>
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M16.1246 24.174C10.0376 24.174 5.32763 19.2726 5.32763 13.5104C5.32763 7.74823 10.0376 2.84676 16.1246 2.84676C22.2115 2.84676 26.9215 7.74823 26.9215 13.5104C26.9215 19.2726 22.2115 24.174 16.1246 24.174ZM16.1246 26.8399C8.76285 26.8399 2.79502 20.8721 2.79502 13.5104C2.79502 6.14869 8.76285 0.180847 16.1246 0.180847C23.4863 0.180847 29.4541 6.14869 29.4541 13.5104C29.4541 20.8721 23.4863 26.8399 16.1246 26.8399Z" fill="white"/>
-                        </svg>
-                    <input class="header-search-input" type="search" name="Поиск">
-                    <svg class="header-search-closed" width="25" height="25" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <button class="header-search-closed">
+                    <svg class="search-closed" width="25" height="25" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect x="2.63623" width="37.2838" height="3.72838" transform="rotate(45 2.63623 0)" fill="white"/>
                         <rect y="26.3636" width="37.2838" height="3.72838" transform="rotate(-45 0 26.3636)" fill="white"/>
                         </svg>
-                </div>
-            </div>
+                </button>
+                <form class="header-search-window">
+                    <button class="header-search-top">
+                        <svg class="search-svg"  width="30" height="29" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="9.15446" height="2.28862" transform="matrix(-0.718931 0.695081 0.718931 0.695081 6.58154 21.0461)" fill="white"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M16.1246 24.174C10.0376 24.174 5.32763 19.2726 5.32763 13.5104C5.32763 7.74823 10.0376 2.84676 16.1246 2.84676C22.2115 2.84676 26.9215 7.74823 26.9215 13.5104C26.9215 19.2726 22.2115 24.174 16.1246 24.174ZM16.1246 26.8399C8.76285 26.8399 2.79502 20.8721 2.79502 13.5104C2.79502 6.14869 8.76285 0.180847 16.1246 0.180847C23.4863 0.180847 29.4541 6.14869 29.4541 13.5104C29.4541 20.8721 23.4863 26.8399 16.1246 26.8399Z" fill="white"/>
+                            </svg>
+                    </button>
+                    <input class="header-search-input" type="search" name="Поиск">
 
+                </form>
+            </div>
         </div>
         <div class="header-bottom">
             <div class="container header-bottom__container">
@@ -161,11 +164,11 @@
         </h1>
         <section class="hero" id="hero">
             <div class="swiper hero-swiper">
-                <div class="swiper-wrapper hero-wrapper">
-                    <div class="swiper-slide slide-1"></div>
-                    <div class="swiper-slide slide-2"></div>
-                    <div class="swiper-slide slide-3"></div>
-                </div>
+                <ul class="swiper-wrapper hero-wrapper">
+                    <li class="swiper-slide slide-1"></li>
+                    <li class="swiper-slide slide-2"></li>
+                    <li class="swiper-slide slide-3"></li>
+                </ul>
                 <div class="container hero-container">
                     <div class="hero-info">
                         <h2 class="hero-info__title">
@@ -235,68 +238,86 @@
                 </div>
                 <div class="gallary-right">
                     <div class="sliders-button">
-                        <div class="gallary__swiper-button-prev" tabindex="0">
+                        <button class="gallary__swiper-button-prev">
                             <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M1 11L6.00001 6L1 0.999997" stroke="white"/>
                                 </svg>
-                        </div>
+                        </button>
                         <div class="gallary__swiper-pagination"></div>
-                        <div class="gallary__swiper-button-next" tabindex="0">
+                        <button class="gallary__swiper-button-next">
                             <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M1 11L6.00001 6L1 0.999997" stroke="white"/>
                             </svg>
-                        </div>
+                        </button>
                     </div>
                     <div class="gallary-slider">
-                        <div class="swiper-wrapper gallary-wrapper">
-                            <div class="swiper-slide gallary-slide" tabindex="0" data-path="one" aria-label="Картина художника">
-                                <picture>
-                                    <source srcset="./img/gallary/gallary-1-530.jpg" media="(max-width: 530px)">
-                                    <source srcset="./img/gallary/gallary-1-768.jpg" media="(max-width: 768px)">
-                                    <source srcset="./img/gallary/gallary-1-1325.jpg" media="(max-width: 1325px)">
-                                    <img class="modal-image" src="./img/gallary/gallary-1.jpg" alt="Картина художника">
-                                </picture>
-                            </div>
-                            <div class="swiper-slide gallary-slide" tabindex="0" data-path="two" aria-label="Картина художника">
-                                <picture>
-                                    <source srcset="./img/gallary/gallary-2-530.jpg" media="(max-width: 530px)">
-                                    <source srcset="./img/gallary/gallary-2-768.jpg" media="(max-width: 768px)">
-                                    <source srcset="./img/gallary/gallary-2-1325.jpg" media="(max-width: 1325px)">
-                                    <img class="modal-image" src="./img/gallary/gallary-2.jpg" alt="Картина художника">
-                                </picture>
-                            </div>
-                            <div class="swiper-slide gallary-slide" tabindex="0" data-path="three" aria-label="Картина художника">
-                                <picture>
-                                    <source srcset="./img/gallary/gallary-3-530.jpg" media="(max-width: 530px)">
-                                    <source srcset="./img/gallary/gallary-3-768.jpg" media="(max-width: 768px)">
-                                    <source srcset="./img/gallary/gallary-3-1325.jpg" media="(max-width: 1325px)">
-                                    <img class="modal-image" src="./img/gallary/gallary-3.jpg" alt="Картина художника">
-                                </picture>
-                            </div>
-                            <div class="swiper-slide gallary-slide" tabindex="0" data-path="four" aria-label="Картина художника">
-                                <picture>
-                                    <source srcset="./img/gallary/gallary-4-530.jpg" media="(max-width: 530px)">
-                                    <source srcset="./img/gallary/gallary-4-768.jpg" media="(max-width: 768px)">
-                                    <source srcset="./img/gallary/gallary-4-1325.jpg" media="(max-width: 1325px)">
-                                    <img class="modal-image" src="./img/gallary/gallary-4.jpg" alt="Картина художника">
-                                </picture>
-                            </div>
-                            <div class="swiper-slide gallary-slide" tabindex="0" data-path="five" aria-label="Картина художника">
-                                <picture>
-                                    <source srcset="./img/gallary/gallary-5-530.jpg" media="(max-width: 530px)">
-                                    <source srcset="./img/gallary/gallary-5-768.jpg" media="(max-width: 768px)">
-                                    <source srcset="./img/gallary/gallary-5-1325.jpg" media="(max-width: 1325px)">
-                                    <img class="modal-image" src="./img/gallary/gallary-5.jpg" alt="Картина художника">
-                                </picture>
-                            </div>
-                            <div class="swiper-slide gallary-slide" tabindex="0" data-path="six" aria-label="Картина художника">
-                                <picture class="gallary-slide-img">
-                                    <source srcset="./img/gallary/gallary-6-768.jpg" media="(max-width: 768px)">
-                                    <source srcset="./img/gallary/gallary-6-1325.jpg" media="(max-width: 1325px)">
-                                    <img class="modal-image" src="./img/gallary/gallary-6.jpg" alt="Картина художника">
-                                </picture>
-                            </div>
-                        </div>
+                        <ul class="swiper-wrapper gallary-wrapper">
+                            <li class="gallary-content swiper-slide">
+                                <button class="gallary-slide" data-path="one" aria-label="Картина художника">
+                                    <picture>
+                                        <source srcset="./img/gallary/gallary-1-530.jpg" media="(max-width: 530px)">
+                                        <source srcset="./img/gallary/gallary-1-768.jpg" media="(max-width: 768px)">
+                                        <source srcset="./img/gallary/gallary-1-1325.jpg" media="(max-width: 1325px)">
+                                        <img class="modal-image" src="./img/gallary/gallary-1.jpg" alt="Картина художника">
+                                    </picture>
+                                </button>
+                            </li>
+
+                            <li class="gallary-content swiper-slide">
+                                <button class="gallary-slide" data-path="two" aria-label="Картина художника">
+                                    <picture>
+                                        <source srcset="./img/gallary/gallary-2-530.jpg" media="(max-width: 530px)">
+                                        <source srcset="./img/gallary/gallary-2-768.jpg" media="(max-width: 768px)">
+                                        <source srcset="./img/gallary/gallary-2-1325.jpg" media="(max-width: 1325px)">
+                                        <img class="modal-image" src="./img/gallary/gallary-2.jpg" alt="Картина художника">
+                                    </picture>
+                                </button>
+                            </li>
+
+                            <li class="gallary-content swiper-slide">
+                                <button class="gallary-slide" data-path="three" aria-label="Картина художника">
+                                    <picture>
+                                        <source srcset="./img/gallary/gallary-3-530.jpg" media="(max-width: 530px)">
+                                        <source srcset="./img/gallary/gallary-3-768.jpg" media="(max-width: 768px)">
+                                        <source srcset="./img/gallary/gallary-3-1325.jpg" media="(max-width: 1325px)">
+                                        <img class="modal-image" src="./img/gallary/gallary-3.jpg" alt="Картина художника">
+                                    </picture>
+                                </button>
+                            </li>
+
+                            <li class="gallary-content swiper-slide">
+                                <button class="gallary-slide" data-path="four" aria-label="Картина художника">
+                                    <picture>
+                                        <source srcset="./img/gallary/gallary-4-530.jpg" media="(max-width: 530px)">
+                                        <source srcset="./img/gallary/gallary-4-768.jpg" media="(max-width: 768px)">
+                                        <source srcset="./img/gallary/gallary-4-1325.jpg" media="(max-width: 1325px)">
+                                        <img class="modal-image" src="./img/gallary/gallary-4.jpg" alt="Картина художника">
+                                    </picture>
+                                </button>
+                            </li>
+
+                            <li class="gallary-content swiper-slide">
+                                <button class="gallary-slide" data-path="five" aria-label="Картина художника">
+                                    <picture>
+                                        <source srcset="./img/gallary/gallary-5-530.jpg" media="(max-width: 530px)">
+                                        <source srcset="./img/gallary/gallary-5-768.jpg" media="(max-width: 768px)">
+                                        <source srcset="./img/gallary/gallary-5-1325.jpg" media="(max-width: 1325px)">
+                                        <img class="modal-image" src="./img/gallary/gallary-5.jpg" alt="Картина художника">
+                                    </picture>
+                                </button>
+                            </li>
+
+                            <li class="gallary-content swiper-slide">
+                                <button class="gallary-slide" data-path="six" aria-label="Картина художника">
+                                    <picture class="gallary-slide-img">
+                                        <source srcset="./img/gallary/gallary-6-768.jpg" media="(max-width: 768px)">
+                                        <source srcset="./img/gallary/gallary-6-1325.jpg" media="(max-width: 1325px)">
+                                        <img class="modal-image" src="./img/gallary/gallary-6.jpg" alt="Картина художника">
+                                    </picture>
+                                </button>
+                            </li>
+
+                        </ul>
                     </div>
                     <div class="gallary-modals modals">
                         <div class="modals__overlay">
@@ -919,16 +940,16 @@
                 <h2 class="events-title section-subtitle">
                     События
                 </h2>
-                <div class="events__swiper-button-prev" tabindex="0">
+                <button class="events__swiper-button-prev">
                     <svg width="11" height="18" viewBox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1.33334 0.666663L9.66667 9L1.33334 17.3333" stroke="black"/>
                     </svg>
-                </div>
-                <div class="events__swiper-button-next" tabindex="0">
+                </button>
+                <button class="events__swiper-button-next">
                     <svg width="11" height="18" viewBox="0 0 11 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1.33334 0.666663L9.66667 9L1.33334 17.3333" stroke="black"/>
                     </svg>
-                </div>
+                </button>
                 <div class="events-slider">
                     <ul class="swiper-wrapper events-wrapper">
                         <li class="swiper-slide events-slide">
@@ -948,7 +969,7 @@
                                         с&nbsp;20&nbsp;марта по&nbsp;30&nbsp;апреля
                                     </span>
                                 <h3 class="swiper-slide__info-title">
-                                    Книжная гравюра в&nbsp;живом восприятии
+                                    Книжная гравюра в живом восприятии
                                 </h3>
                                 <p class="swiper-slide__info-descr">
                                     Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и&nbsp;сын Ридольфо.
@@ -1068,21 +1089,20 @@
                     Проекты
                 </h2>
                 <p class="projects-descr">
-                    Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно фиксирует необходимость своевременного выполнения сверхзадачи. А&nbsp;ещё независимые государства смешаны с&nbsp;не&nbsp;уникальными данными до&nbsp;степени
-                    совершенной неузнаваемости, из-за чего возрастает их&nbsp;статус бесполезности. Прежде всего, постоянное информационно-пропагандистское<button class="projects-button" data-tippy-content="Пример современных тенденций - современная методология разработки">i</button>                    обеспечение нашей деятельности однозначно фиксирует необходимость экономической целесообразности принимаемых решений. И&nbsp;нет сомнений, что действия представителей оппозиции могут быть рассмотрены<button class="projects-button"
-                        data-tippy-content="Приятно, граждане, наблюдать, как сделанные на база аналитики выводы вызывают у вас эмоции">i</button> исключительно в&nbsp;разрезе маркетинговых и&nbsp;финансовых<button class="projects-button" data-tippy-content="В сремлении повысить качество">i</button>                    предпосылок. Банальные, но&nbsp;неопровержимые выводы, а&nbsp;также представители современных социальных резервов призывают нас к&nbsp;новым свершениям, которые, в&nbsp;свою очередь, должны быть смешаны с&nbsp;не&nbsp;уникальными данными
-                    до&nbsp;степени совершенной неузнаваемости. Подробнее:
+                    Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно фиксирует необходимость своевременного выполнения сверхзадачи. А ещё независимые государства смешаны с не уникальными данными до степени совершенной
+                    неузнаваемости, из-за чего возрастает их статус бесполезности. Прежде всего, постоянное информационно-пропагандистское<button class="projects-button" data-tippy-content="Пример современных тенденций - современная методология разработки">i</button>                    обеспечение нашей деятельности однозначно фиксирует необходимость экономической целесообразности принимаемых решений. И нет сомнений, что действия представителей оппозиции могут быть рассмотрены<button class="projects-button" data-tippy-content="Приятно, граждане, наблюдать, как сделанные на база аналитики выводы вызывают у вас эмоции">i</button>                    исключительно в разрезе маркетинговых и финансовых<button class="projects-button" data-tippy-content="В сремлении повысить качество">i</button> предпосылок. Банальные, но неопровержимые выводы, а также представители современных социальных
+                    резервов призывают нас к новым свершениям, которые, в свою очередь, должны быть смешаны с не уникальными данными до степени совершенной неузнаваемости. Подробнее:
                     <a href="blanchard-art.ru/projects" class="projects-descr__link">blanchard-art.ru/projects</a>
                 </p>
                 <p class="project-sliders-descr">
                     Партнёры проектов:
                 </p>
                 <div class="project-swiper">
-                    <div class="projects__swiper-button-prev" tabindex="0">
+                    <button class="projects__swiper-button-prev">
                         <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M6 11L0.999995 6L6 0.999998" stroke="black"/>
                             </svg>
-                    </div>
+                    </button>
                     <div class="projects-slider">
                         <ul class="swiper-wrapper projects-wrapper">
                             <li class="swiper-slide projects__swiper-slide">
@@ -1132,11 +1152,11 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="projects__swiper-button-next" tabindex="0">
+                    <button class="projects__swiper-button-next">
                         <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M0.999995 11L6 6L0.999995 0.999997" stroke="black"/>
                             </svg>
-                    </div>
+                    </button>
                 </div>
             </div>
         </section>

@@ -8,25 +8,23 @@ window.addEventListener('DOMContentLoaded', function() {
 
     // открытие/закрытие search
     document.querySelector('.header-top__search').addEventListener('click', function() {
-        document.querySelector('.header-search-window').classList.add('header-search-window--open')
-    })
-    document.querySelector('.header-top__search').addEventListener('click', function() {
-        document.querySelector('.header-search-input').classList.add('header-search-input--open')
+        document.querySelector('.header-search-window').classList.add('header-search-window--open'),
+            document.querySelector('.header-search-input').classList.add('header-search-input--open')
     })
     document.querySelector('.header-search-closed').addEventListener('click', function() {
-        document.querySelector('.header-search-window').classList.remove('header-search-window--open')
-    })
-    document.querySelector('.header-search-closed').addEventListener('click', function() {
-        document.querySelector('.header-search-input').classList.remove('header-search-input--open')
+        document.querySelector('.header-search-window').classList.remove('header-search-window--open'),
+            document.querySelector('.header-search-input').classList.remove('header-search-input--open')
     })
 
     // появление/изчезание search
     document.querySelector('.header-top__search').addEventListener('click', function() {
-        document.querySelector('.header-top__search').classList.add('header-top__search-none')
+        document.querySelector('.header-top__search').classList.add('header-top__search-none'),
+            document.querySelector('.header-search-closed').classList.add('header-search-closed--is-open')
     })
 
     document.querySelector('.header-search-closed').addEventListener('click', function() {
-        document.querySelector('.header-top__search').classList.remove('header-top__search-none')
+        document.querySelector('.header-top__search').classList.remove('header-top__search-none'),
+            document.querySelector('.header-search-closed').classList.remove('header-search-closed--is-open')
     })
 })
 
@@ -278,6 +276,8 @@ btns.forEach((el) => {
     el.addEventListener('click', (e) => {
         let path = e.currentTarget.getAttribute('data-path');
 
+        document.body.style.overflow = 'hidden';
+
         modal.forEach((el) => {
             el.classList.remove('modal--visible')
         });
@@ -287,48 +287,31 @@ btns.forEach((el) => {
     });
 });
 
+modalsOverlay.addEventListener('click', (e) => {
+
+    if (e.target == modalsOverlay) {
+        modalsOverlay.classList.remove('modals__overlay--visible');
+
+        document.body.style.overflow = '';
+
+        modal.forEach((el) => {
+            el.classList.remove('modals__overlay--visible');
+        });
+    }
+});
+
 modalClosed.forEach(function(item) {
 
     item.addEventListener('click', function(e) {
         let parentModal = this.closest('.modals__overlay');
+
+        document.body.style.overflow = '';
 
         parentModal.classList.remove('modals__overlay--visible');
         modalOverlay.classList.remove('modals__overlay--visible');
     });
 
 });
-
-// убираем скролл в модальном окне
-
-const body = document.body;
-
-let disableScroll = function() {
-    let pagePosition = window.scrollY;
-    document.body.classList.add('disable-scroll');
-    document.body.dataset.position = pagePosition;
-    document.body.style.top = -pagePosition + 'px';
-}
-
-let enableScroll = function() {
-    let pagePosition = parseInt(document.body.dataset.position, 10);
-    document.body.style.top = 'auto';
-    document.body.classList.remove('disable-scroll');
-    window.scroll({ top: pagePosition, left: 0 });
-    document.body.removeAttribute('data-position');
-}
-
-btns.forEach(function(el) {
-    el.addEventListener('click', () => {
-        disableScroll();
-    });
-});
-
-modalClosed.forEach(function(el) {
-    el.addEventListener('click', () => {
-        enableScroll();
-    });
-});
-
 
 // плавные якорные ссылки
 
