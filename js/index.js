@@ -228,11 +228,11 @@ $(function() {
 
 // табы в секции catalog
 
-document.querySelectorAll('.catalog__items-info--link').forEach(function(tabsBtn) {
+document.querySelectorAll('.catalog__items-info-link').forEach(function(tabsBtn) {
     tabsBtn.addEventListener('click', function(e) {
         const path = e.currentTarget.dataset.path;
 
-        document.querySelectorAll('.catalog__items-info--link').forEach(function(btn) {
+        document.querySelectorAll('.catalog__items-info-link').forEach(function(btn) {
             btn.classList.remove('catalog-tabs')
         });
         document.querySelectorAll('.catalog-tabs').forEach(function(tabsBtn) {
