@@ -58,14 +58,14 @@ body {
 }
 
 :root {
-    --link-color: #FFFFFF;
+    --link-color: #ffffff;
     --descr-color: #333333;
-    --border-color: #9D5CD0;
+    --border-color: #9d5cd0;
     --small-text-color: #999999;
     --status-color-light: #c283f3;
-    --status-color-dark: #7943A4;
+    --status-color-dark: #7943a4;
     --background-color: #000000;
-    --border-color-dafault: #CACACA;
+    --border-color-dafault: #cacaca;
 }
 
 
@@ -95,6 +95,10 @@ body {
 }
 
 .burger-closed {
+    display: none;
+}
+
+.header-search-closed {
     display: none;
 }
 
@@ -182,12 +186,12 @@ body {
 }
 
 .header-link::before {
-    content: '';
+    content: "";
     margin-right: 7px;
     width: 13px;
     height: 13px;
     flex-shrink: 0;
-    background-image: url('../img/header/enter.svg');
+    background-image: url("../img/header/enter.svg");
     background-size: cover;
     transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
@@ -449,12 +453,12 @@ body {
 }
 
 .hero-info__link:hover {
-    border: 3px solid #D1A9F0;
+    border: 3px solid #d1a9f0;
     transition: all 0.3s ease-in-out;
 }
 
 .hero-info__link:active {
-    border: 3px solid #D1A9F0;
+    border: 3px solid #d1a9f0;
     background: var(--status-color-dark);
     outline: none;
     transition: all 0.3s ease-in-out;
@@ -679,7 +683,7 @@ label:hover {
 }
 
 .gallary-left__item-custom-icon::before {
-    content: '';
+    content: "";
     display: inline-block;
     position: absolute;
     top: 3px;
@@ -816,7 +820,7 @@ label:hover {
 }
 
 .gallary-slide::before {
-    content: '';
+    content: "";
     position: absolute;
     z-index: 50;
     top: 6%;
@@ -840,20 +844,20 @@ label:hover {
 }
 
 .gallary-slide:active {
-    outline: 2px solid #D1A9F0;
+    outline: 2px solid #d1a9f0;
     outline-offset: -2px;
     transition: all 0.3s ease-in-out;
 }
 
 .gallary-slide::after {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     z-index: 5;
-    background-image: linear-gradient(0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url(A5A9A825-44DE-45C8-8EBD-70ED43DAA3B7.jpg);
+    background-image: linear-gradient( 0deg, rgba(194, 131, 243, 0.4), rgba(194, 131, 243, 0.4)), url(A5A9A825-44DE-45C8-8EBD-70ED43DAA3B7.jpg);
     opacity: 0;
     transition: all 0.3s ease-in-out;
 }
@@ -889,7 +893,7 @@ label:hover {
     justify-content: center;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, .6);
+    background-color: rgba(0, 0, 0, 0.6);
     overflow: hidden;
     visibility: hidden;
     opacity: 0;
@@ -900,7 +904,7 @@ label:hover {
     display: flex;
     visibility: visible;
     opacity: 1;
-    transition: all .3s ease-in-out;
+    transition: all 0.3s ease-in-out;
     z-index: 100;
 }
 
@@ -911,7 +915,7 @@ label:hover {
     width: 900px;
     height: 480px;
     max-height: 90vh;
-    transition: all .3s ease-in-out;
+    transition: all 0.3s ease-in-out;
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
@@ -922,7 +926,7 @@ label:hover {
 
 .modal--visible {
     display: flex;
-    transition: all .3s ease-in-out;
+    transition: all 0.3s ease-in-out;
     z-index: 100;
 }
 
@@ -1086,12 +1090,40 @@ label:hover {
     width: 801px;
 }
 
-.catalog__items-info--link {
+.catalog__items-info-link {
     font-weight: normal;
     font-size: 16px;
     line-height: 32px;
     color: var(--descr-color);
     border-bottom: 1px solid transparent;
+}
+
+.ui-widget-content .catalog__items-info-link {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 32px;
+    color: var(--descr-color);
+}
+
+.ui-widget-content .catalog__items-info-link:focus-visible {
+    color: var(--link-color);
+    outline: none;
+    background-color: var(--border-color);
+    transition: all 0.3s ease-in-out;
+}
+
+.ui-widget-content .catalog__items-info-link:hover {
+    color: var(--border-color);
+    border-bottom: 1px solid currentColor;
+    background-color: transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+.ui-widget-content .catalog__items-info-link:active {
+    color: var(--status-color-dark);
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: all 0.3s ease-in-out;
 }
 
 .ui-widget-content a {
@@ -1115,34 +1147,6 @@ label:hover {
 .ui-widget-content a:active {
     color: var(--descr-color);
     background-color: transparent;
-}
-
-.ui-widget-content .catalog__items-info--link {
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 32px;
-    color: var(--descr-color);
-}
-
-.ui-widget-content .catalog__items-info--link:focus-visible {
-    color: var(--link-color);
-    outline: none;
-    background-color: var(--border-color);
-    transition: all 0.3s ease-in-out;
-}
-
-.ui-widget-content .catalog__items-info--link:hover {
-    color: var(--border-color);
-    border-bottom: 1px solid currentColor;
-    background-color: transparent;
-    transition: all 0.3s ease-in-out;
-}
-
-.ui-widget-content .catalog__items-info--link:active {
-    color: var(--status-color-dark);
-    border-bottom: 1px solid transparent;
-    background-color: transparent;
-    transition: all 0.3s ease-in-out;
 }
 
 .ui-icon-triangle-1-s,
@@ -1172,36 +1176,36 @@ label:hover {
     border-top: 1px solid var(--border-color);
     border-bottom: 1px solid var(--border-color);
     z-index: 20;
-    transition: all .3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 .ui-accordion .ui-accordion-header:active {
     border-top: 1px solid var(--status-color-dark);
     border-bottom: 1px solid var(--status-color-dark);
     z-index: 30;
-    transition: all .3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 .ui-state-focus .catalog__item-title {
     color: var(--link-color);
     background-color: var(--border-color);
-    transition: all .3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 .ui-state-focus svg path {
-    fill: #D1A9F0;
-    transition: all .3s ease-in-out;
+    fill: #d1a9f0;
+    transition: all 0.3s ease-in-out;
 }
 
 .ui-state-hover .catalog__item-title {
     color: var(--border-color);
     background-color: transparent;
-    transition: all .3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 .ui-state-hover svg path {
-    fill: #D1A9F0;
-    transition: all .3s ease-in-out;
+    fill: #d1a9f0;
+    transition: all 0.3s ease-in-out;
 }
 
 .catalog__item-title {
@@ -1212,7 +1216,7 @@ label:hover {
 }
 
 .catalog__item-top-img {
-    transition: all .3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 .catalog__item-top-img path {
@@ -1248,8 +1252,8 @@ label:hover {
     width: 275px;
     height: 189px;
     border: 12px solid white;
-    outline: 2px solid #B7B7B7;
-    background-color: #B7B7B7;
+    outline: 2px solid #b7b7b7;
+    background-color: #b7b7b7;
 }
 
 .catalog-info__right {
@@ -1279,7 +1283,7 @@ label:hover {
 
 .ui-accordion-header-active.ui-state-active .catalog__item-title {
     background-color: transparent;
-    transition: all .3s ease-in-out;
+    transition: all 0.3s ease-in-out;
     color: var(--status-color-dark);
 }
 
@@ -1291,15 +1295,15 @@ label:hover {
 }
 
 .ui-state-active svg path {
-    fill: #D1A9F0;
+    fill: #d1a9f0;
     stroke: white;
-    transition: all .3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 .ui-accordion-header-active.ui-state-active svg path {
-    fill: #D1A9F0;
+    fill: #d1a9f0;
     stroke: #000000;
-    transition: all .3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 .ui-accordion-icons.ui-accordion-header-active.ui-state-active svg {
@@ -1351,11 +1355,11 @@ label:hover {
     width: 52px;
     height: 52px;
     border-radius: 50%;
-    background: #ECECEC;
+    background: #ececec;
     background-repeat: no-repeat;
     background-position: center center;
     cursor: pointer;
-    transition: all .3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 .events__swiper-button-next {
@@ -1370,13 +1374,13 @@ label:hover {
 
 .events__swiper-button-next:hover,
 .events__swiper-button-prev:hover {
-    background-color: #D1A9F0;
+    background-color: #d1a9f0;
     transition: all 0.3s ease-in-out;
 }
 
 .events__swiper-button-next:active,
 .events__swiper-button-prev:active {
-    background: #D1A9F0;
+    background: #d1a9f0;
     outline: 2px solid var(--border-color);
     transition: all 0.3s ease-in-out;
 }
@@ -1501,13 +1505,13 @@ label:hover {
 .projects-button:focus-visible {
     color: var(--background-color);
     outline: none;
-    background: #D1A9F0;
+    background: #d1a9f0;
     border: 1px solid var(--border-color);
 }
 
 .projects-button:hover {
     color: var(--background-color);
-    background: #D1A9F0;
+    background: #d1a9f0;
 }
 
 .projects-button:active {
@@ -1604,7 +1608,7 @@ label:hover {
     justify-content: center;
     width: 32px;
     height: 32px;
-    background: #ECECEC;
+    background: #ececec;
     border-radius: 50%;
     background-repeat: no-repeat;
     background-position: center center;
@@ -1618,13 +1622,13 @@ label:hover {
 
 .projects__swiper-button-next:hover,
 .projects__swiper-button-prev:hover {
-    background-color: #D1A9F0;
+    background-color: #d1a9f0;
     transition: all 0.3s ease-in-out;
 }
 
 .projects__swiper-button-next:active,
 .projects__swiper-button-prev:active {
-    background: #D1A9F0;
+    background: #d1a9f0;
     outline: 2px solid var(--border-color);
     transition: all 0.3s ease-in-out;
 }
@@ -1659,7 +1663,7 @@ label:hover {
 
 .projects__swipper-link img {
     filter: grayscale(100%);
-    opacity: .4;
+    opacity: 0.4;
     transition: all 0.3s ease-in-out;
 }
 
@@ -1740,7 +1744,7 @@ label:hover {
     font-weight: normal;
     font-size: 12px;
     line-height: 16px;
-    color: #D11616;
+    color: #d11616;
 }
 
 .feedback-form-input {
@@ -1754,12 +1758,12 @@ label:hover {
 
 .feedback-form-input:focus-visible {
     outline: none;
-    background: #EAEAEA;
+    background: #eaeaea;
     transition: all 0.3s ease-in-out;
 }
 
 .feedback-form-input:hover {
-    background: #EAEAEA;
+    background: #eaeaea;
     transition: all 0.3s ease-in-out;
 }
 
@@ -1797,7 +1801,7 @@ label:hover {
 .feedback-form-order:active {
     color: var(--link-color);
     background: var(--status-color-dark);
-    border: 3px solid #D1A9F0;
+    border: 3px solid #d1a9f0;
     transition: all 0.3s ease-in-out;
 }
 
@@ -1829,18 +1833,18 @@ label:hover {
 
 .feedback__social-item-link:focus-visible {
     outline: none;
-    opacity: .5;
+    opacity: 0.5;
     transition: all 0.3s ease-in-out;
 }
 
 .feedback__social-item-link:hover {
-    opacity: .5;
+    opacity: 0.5;
     transition: all 0.3s ease-in-out;
 }
 
 .feedback__social-item-link svg:active {
     opacity: 1;
-    outline: 1px solid #9643A4;
+    outline: 1px solid #9643a4;
     border-radius: 50%;
     transition: all 0.3s ease-in-out;
 }
