@@ -808,8 +808,6 @@ label:hover {
     right: 0;
     bottom: 0;
     left: 0;
-    display: flex;
-    align-items: center;
     cursor: pointer;
 }
 
@@ -1662,6 +1660,7 @@ label:hover {
 }
 
 .projects__swipper-link img {
+    max-height: 100%;
     filter: grayscale(100%);
     opacity: 0.4;
     transition: all 0.3s ease-in-out;
