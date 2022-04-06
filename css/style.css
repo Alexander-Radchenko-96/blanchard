@@ -570,6 +570,10 @@ body {
     border-radius: 6px;
 }
 
+.gallary-left__list-dropdown::-webkit-scrollbar {
+    display: none;
+}
+
 .gallary-left__list-items {
     padding: 0;
 }
