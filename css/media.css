@@ -22,7 +22,6 @@
     .container {
         padding: 0 50px;
     }
-    /* --------------------------header-1230--------------- */
     .header-top__container {
         justify-content: space-between;
         padding-top: 29px;
@@ -98,7 +97,6 @@
     .header-search-closed:active rect {
         fill: var(--status-color-dark);
     }
-    /* ---------------------------burger-end */
     /* ---------------------------search-1230 */
     .header-top__search {
         display: block;
@@ -167,7 +165,6 @@
         z-index: 550;
         transition: all 0.3s ease-in-out;
     }
-    /* -------------------------hero-1230------------------ */
     .hero-info {
         padding: 213px 0 137px 0;
         max-width: 656px;
@@ -199,7 +196,6 @@
     .slide-3 {
         background-image: url("../img/hero/slider-three-1325.jpg");
     }
-    /* -------------------------gallary-1230--------------- */
     .gallary {
         padding-bottom: 77px;
     }
@@ -215,8 +211,8 @@
     }
     .modal-info {
         padding: 15px 35px;
+        width: 460px;
     }
-    /* -------------------------catalog-1230--------------- */
     .catalog {
         padding-bottom: 34px;
     }
@@ -228,7 +224,6 @@
         -moz-columns: 2;
         columns: 2;
     }
-    /* -------------------------events-1230----------------- */
     .events {
         padding-top: 35px;
         padding-bottom: 33px;
@@ -270,7 +265,6 @@
     .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
         margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 7px);
     }
-    /* -------------------------projects-1230------------------- */
     .projects {
         padding-top: 34px;
     }
@@ -281,7 +275,6 @@
         padding: 28px 50px;
         height: 127px;
     }
-    /* -------------------------feedback-1230----------------- */
     .feedback {
         padding-top: 43px;
         padding-bottom: 39px;
@@ -303,7 +296,6 @@
         margin-bottom: 15px;
         padding: 10.5px 41px;
     }
-    /* ------------------------footer-1230-------------------- */
     .footer {
         padding: 40px 0;
     }
@@ -317,7 +309,6 @@
 }
 
 @media (max-width: 960px) {
-    /* ------------------------header-960------------------- */
     .header-search-window {
         justify-content: center;
         padding: 27px 90px 30px 50px;
@@ -326,7 +317,6 @@
     .header-search-input--open {
         width: 100%;
     }
-    /* ------------------------gallary-960------------------ */
     .modal {
         width: 670px;
         height: 400px;
@@ -337,7 +327,6 @@
     .modal-info {
         width: 378px;
     }
-    /* ------------------------cataog-960------------------- */
     .catalog__list {
         width: 310px;
     }
@@ -346,7 +335,6 @@
         -moz-columns: 1;
         columns: 1;
     }
-    /* ------------------------events-960------------------- */
     .events-wrapper {
         margin-bottom: 30px;
     }
@@ -354,7 +342,6 @@
         min-height: 350px;
         padding: 13px 15px 30px 15px;
     }
-    /* ------------------------feedback-960----------------- */
     .feedback-form {
         flex-wrap: wrap;
         margin-bottom: 30px;
@@ -365,11 +352,9 @@
 }
 
 @media (max-width: 768px) {
-    /* ------------------------header-768----------------------- */
     .burger-window {
         padding: 34px 60px 30px 50px;
     }
-    /* ------------------------hero-768------------------------- */
     .slide-1 {
         background-image: url("../img/hero/slider-1-768.jpg");
     }
@@ -379,7 +364,6 @@
     .slide-3 {
         background-image: url("../img/hero/slider-3-768.jpg");
     }
-    /* -------------------------gallary-768--------------------- */
     .gallary {
         background-image: url("../img/gallary/gallary-bg-768.jpg");
     }
@@ -417,10 +401,14 @@
         width: 250px;
     }
     .modal-info {
-        padding: 10px 37px 10px 10px;
+        padding: 10px 41px 10px 10px;
         width: 320px;
     }
-    /* ------------------------catalog-768---------------------- */
+    .modal-info__descr {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+    }
     .catalog {
         padding-bottom: 34px;
     }
@@ -451,7 +439,6 @@
     .tabs__img {
         margin-bottom: 29px;
     }
-    /* ------------------------events-768----------------------- */
     .events {
         padding-top: 35px;
         padding-bottom: 38px;
@@ -469,7 +456,6 @@
     .swiper-horizontal>.swiper-pagination-bullets {
         bottom: 0;
     }
-    /* -----------------------projects-768----------------------- */
     .projects {
         padding-top: 38px;
     }
@@ -489,7 +475,6 @@
         padding: 23px 26px;
         height: 106px;
     }
-    /* -----------------------feedback-768---------------------- */
     .feedback {
         padding-top: 42px;
     }
@@ -546,6 +531,11 @@
         padding: 10px 37px 10px 10px;
         width: 100%;
     }
+    .modal-info__descr {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 34px;
+    }
     .catalog__list {
         margin-bottom: 40px;
     }
@@ -584,7 +574,6 @@
         font-size: 28px;
         line-height: 38px;
     }
-    /* ----------------------header-530----- */
     .header-top__container {
         padding-top: 11px;
         padding-bottom: 9px;
@@ -650,7 +639,6 @@
         width: 17px;
         height: 19px;
     }
-    /* ------------------------hero-530 */
     .slide-1 {
         background-image: url("../img/hero/slider-1-530.jpg");
     }
@@ -681,7 +669,6 @@
         font-size: 12px;
         line-height: 16px;
     }
-    /* ----------------------about-530 */
     .about {
         padding-top: 50px;
         padding-bottom: 40px;
@@ -694,7 +681,6 @@
         font-size: 14px;
         line-height: 28px;
     }
-    /* ----------------------gallary-530 */
     .gallary {
         padding-top: 51px;
         padding-bottom: 51px;
@@ -746,7 +732,6 @@
         top: 10px;
         right: 10px;
     }
-    /* ------------------------catalog-530 */
     .catalog {
         padding-top: 51px;
         padding-bottom: 25px;
@@ -806,7 +791,6 @@
     .tabs__subtitle {
         margin-bottom: 13px;
     }
-    /* -------------------------events-530 */
     .events {
         padding-top: 26px;
         padding-bottom: 19px;
@@ -829,7 +813,6 @@
     .swiper-slide__info-title {
         margin-bottom: 4px;
     }
-    /* -------------------------projects-530 */
     .projects {
         padding-top: 18px;
         padding-bottom: 25px;
@@ -860,7 +843,6 @@
         padding: 9px 43px;
         height: 90px;
     }
-    /* ------------------------feedback-530 */
     .feedback {
         padding-top: 26px;
         border: none;
@@ -925,7 +907,6 @@
     .map {
         height: 298px;
     }
-    /* ------------------------footer-530 */
     .footer {
         padding: 19px 0;
     }

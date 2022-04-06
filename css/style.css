@@ -35,9 +35,6 @@ body {
     max-width: 100%;
 }
 
-
-/* ---------------------global--------------- */
-
 .container {
     margin: 0 auto;
     padding: 0 30px;
@@ -67,9 +64,6 @@ body {
     --background-color: #000000;
     --border-color-dafault: #cacaca;
 }
-
-
-/* -------------------------header-top----------------- */
 
 .header {
     position: absolute;
@@ -219,9 +213,6 @@ body {
     display: none;
 }
 
-
-/* ------------------------header-bottom---------------------- */
-
 .header-bottom {
     z-index: 50;
     background: rgba(0, 0, 0, 0.4);
@@ -242,9 +233,6 @@ body {
 .header-bottom__item:not(:last-child) {
     margin-right: 96px;
 }
-
-
-/* ----------------------background-select---------------- */
 
 .bg-tintoreto {
     background-image: url("../img/header/select-bg/1.jpg");
@@ -326,9 +314,6 @@ body {
     background-image: url("../img/header/select-bg/20.jpg");
 }
 
-
-/* ----------------------------background-select-end------------- */
-
 .header-bottom__search-img {
     position: relative;
     left: 3px;
@@ -404,9 +389,6 @@ body {
 .simplebar-track.simplebar-horizontal {
     display: none;
 }
-
-
-/* ---------------------------hero----------------- */
 
 .hero-info {
     position: relative;
@@ -499,9 +481,6 @@ body {
     background-size: cover;
 }
 
-
-/* -----------------------------about------------------- */
-
 .about {
     padding-top: 80px;
     padding-bottom: 70px;
@@ -522,9 +501,6 @@ body {
     line-height: 32px;
     color: var(--descr-color);
 }
-
-
-/* -----------------------------gallary--------------- */
 
 .gallary {
     padding-top: 80px;
@@ -770,6 +746,11 @@ label:hover {
     cursor: pointer;
 }
 
+.gallary__swiper-button-next svg,
+.gallary__swiper-button-prev svg {
+    margin-left: 2px;
+}
+
 .gallary__swiper-button-prev {
     transform: rotate(180deg);
     transition: all 0.3s ease-in-out;
@@ -954,7 +935,10 @@ label:hover {
 }
 
 .modal-info {
-    padding: 20px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 49px;
     width: 500px;
     height: 100%;
     background-color: var(--link-color);
@@ -993,12 +977,9 @@ label:hover {
 .modal-info__descr {
     font-weight: 400;
     font-size: 16px;
-    line-height: 22px;
+    line-height: 32px;
     color: var(--descr-color);
 }
-
-
-/* --------------------catalog------------------- */
 
 .catalog {
     padding-top: 81px;
@@ -1080,9 +1061,6 @@ label:hover {
     color: var(--descr-color);
     background-color: transparent;
 }
-
-
-/* --------------------accordion-catalog */
 
 .catalog__list {
     width: 801px;
@@ -1309,9 +1287,6 @@ label:hover {
     transition: transform 0.3s ease-in-out;
 }
 
-
-/* --------------------------------------events--------------------------------- */
-
 .events {
     padding-top: 50px;
     padding-bottom: 42px;
@@ -1469,9 +1444,6 @@ label:hover {
     display: none;
 }
 
-
-/* ----------------------projects------------------ */
-
 .projects {
     padding-top: 41px;
     padding-bottom: 80px;
@@ -1604,8 +1576,8 @@ label:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 32px;
-    height: 32px;
+    width: 30px;
+    height: 30px;
     background: #ececec;
     border-radius: 50%;
     background-repeat: no-repeat;
@@ -1677,9 +1649,6 @@ label:hover {
     opacity: 1;
     transition: all 0.3s ease-in-out;
 }
-
-
-/* -------------------feedback-------------------- */
 
 .feedback {
     border-top: 1px solid var(--border-color-dafault);
@@ -1848,9 +1817,6 @@ label:hover {
     transition: all 0.3s ease-in-out;
 }
 
-
-/* ---------------map------------ */
-
 .map {
     position: relative;
     width: 100%;
@@ -1860,9 +1826,6 @@ label:hover {
 [class*="ground-pane"] {
     filter: grayscale(1);
 }
-
-
-/* -----------------footer------------ */
 
 .footer {
     padding: 47px 0;
