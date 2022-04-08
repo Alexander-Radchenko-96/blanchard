@@ -393,7 +393,7 @@ body {
 .hero-info {
     position: relative;
     z-index: 100;
-    padding: 239px 0 145px 0;
+    padding: 239px 0 119px 0;
     max-width: 597px;
 }
 
@@ -407,7 +407,7 @@ body {
 }
 
 .hero-info__descr {
-    margin-bottom: 114px;
+    margin-bottom: 92px;
     max-width: 579px;
     font-weight: bold;
     font-size: 18px;
@@ -416,6 +416,7 @@ body {
 }
 
 .hero-info__link {
+    display: inline-block;
     padding: 19.5px 32px;
     background: var(--border-color);
     border: 3px solid var(--border-color);
@@ -889,6 +890,7 @@ label:hover {
     opacity: 1;
     transition: all 0.3s ease-in-out;
     z-index: 100;
+    cursor: pointer;
 }
 
 .modal {

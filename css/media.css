@@ -16,6 +16,14 @@
     .header-bottom__item:not(:last-child) {
         margin-right: 50px;
     }
+    .catalog__list {
+        width: 580px;
+    }
+    .catalog__items-details--columns {
+        -webkit-columns: 2;
+        -moz-columns: 2;
+        columns: 2;
+    }
 }
 
 @media (max-width: 1230px) {
@@ -165,8 +173,14 @@
         z-index: 550;
         transition: all 0.3s ease-in-out;
     }
+    input::-webkit-search-decoration,
+    input::-webkit-search-cancel-button,
+    input::-webkit-search-results-button,
+    input::-webkit-search-results-decoration {
+        display: none;
+    }
     .hero-info {
-        padding: 213px 0 137px 0;
+        padding: 213px 0 111px 0;
         max-width: 656px;
     }
     .hero-info__title {
@@ -176,7 +190,7 @@
         line-height: 83px;
     }
     .hero-info__descr {
-        margin-bottom: 156px;
+        margin-bottom: 134px;
         max-width: 656px;
         font-weight: 700;
         font-size: 18px;
@@ -649,7 +663,7 @@
         background-image: url("../img/hero/slider-3-530.jpg");
     }
     .hero-info {
-        padding: 77px 0 58px 0;
+        padding: 77px 0 42px 0;
         width: 100%;
         text-align: center;
     }
@@ -659,7 +673,7 @@
         line-height: 38px;
     }
     .hero-info__descr {
-        margin-bottom: 66px;
+        margin-bottom: 57px;
         font-weight: 400;
         font-size: 12px;
         line-height: 16px;

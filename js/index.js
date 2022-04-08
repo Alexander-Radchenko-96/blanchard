@@ -117,9 +117,16 @@ let mySwiper2 = new Swiper(slider2, {
     pagination: {
         el: '.swiper-pagination',
         type: 'bullets',
+        clickable: true,
     },
 
     breakpoints: {
+
+        530: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            slidesPerGroup: 1
+        },
 
         650: {
             slidesPerView: 2,
@@ -157,7 +164,7 @@ let mySwiper3 = new Swiper(slider3, {
     breakpoints: {
         530: {
             slidesPerView: 1,
-            spaceBetween: 5,
+            spaceBetween: 10,
             slidesPerGroup: 1,
         },
 
